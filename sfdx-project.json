@@ -3,9 +3,68 @@
     {
       "path": "force-app",
       "default": true
+    },
+    {
+      "package": "Main",
+      "versionNumber": "0.0.0.NEXT",
+      "path": "force-app/default/",
+      "default": false
+    },
+    {
+      "package": "FeatureSetA",
+      "versionNumber": "0.0.0.NEXT",
+      "path": "force-app/FeatureSetA/",
+      "default": false,
+      "dependencies": [
+          {
+            "package": "Feature1",
+            "versionNumber": "0.0.0.LATEST"
+          },
+          {
+            "package": "Feature2",
+            "versionNumber": "0.0.0.LATEST"
+          }
+        ]
+    },
+    {
+      "package": "Feature1",
+      "versionNumber": "0.0.0.NEXT",
+      "path": "force-app/Feature1/",
+      "default": false,
+      "dependencies": [
+        {
+          "package": "Utils",
+          "versionNumber": "0.0.0.LATEST"
+        }
+      ]
+    },
+    {
+      "package": "Feature2",
+      "versionNumber": "0.0.0.NEXT",
+      "path": "force-app/Feature2/",
+      "default": false,
+      "dependencies": [
+        {
+          "package": "Utils",
+          "versionNumber": "0.0.0.LATEST"
+        }
+      ]
+    },
+    {
+      "package": "Utils",
+      "versionNumber": "0.0.0.NEXT",
+      "path": "force-app/Utils/",
+      "default": false
     }
   ],
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "48.0"
+  "sourceApiVersion": "48.0",
+  "packageAliases": {
+    "Main":"04tB00000000000",
+    "FeatureSetA":"04tB00000000001",
+    "Feature1":"04tB00000000002",
+    "Feature2":"04tB00000000003",
+    "Utils":"04tB00000000004"
+  }
 }
