@@ -1,7 +1,7 @@
 import { LightningElement, wire } from "lwc";
 import getFooStr from "@salesforce/apex/Utils.getFooStr";
 
-export default class CapitalizedFoo extends LightningElement {
+export default class ReversedFoo extends LightningElement {
   fooStr;
 
   /**
@@ -15,10 +15,10 @@ export default class CapitalizedFoo extends LightningElement {
     }
   }
 
-  get capitalizedFoo() {
+  get reversedFoo() {
     if (!this.fooStr) {
       return "";
     }
-    return this.fooStr.toUpperCase();
+    return this.fooStr.split('').reverse().join('');
   }
 }
