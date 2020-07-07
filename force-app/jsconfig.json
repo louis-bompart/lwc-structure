@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": "."
+    },
+    "include": [
+        "**/default/lwc/**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts", 
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

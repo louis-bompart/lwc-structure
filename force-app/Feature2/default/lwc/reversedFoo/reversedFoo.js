@@ -19,6 +19,6 @@ export default class ReversedFoo extends LightningElement {
     if (!this.fooStr) {
       return "";
     }
-    return this.fooStr.split('').reverse().join('');
+    return this.fooStr.split("").reverse().join("");
   }
 }

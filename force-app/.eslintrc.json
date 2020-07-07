@@ -1,0 +1,8 @@
+{
+  "overrides": [
+    {
+      "files":["**/default/lwc/**/*"],
+      "extends": ["@salesforce/eslint-config-lwc/recommended"]
+    }
+  ]
+}
